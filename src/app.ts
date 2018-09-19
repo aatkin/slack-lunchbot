@@ -24,7 +24,9 @@ if (!module.parent) {
   const app = bootstrap()
   configure(app)
   setupRoutes(app)
-  app.listen(3000, () => {
-    console.log('server listening at localhost:3000')
+
+  const port = process.env.PORT || 3000
+  app.listen(port, () => {
+    console.log(`server listening at localhost:${port}`)
   })
 }
