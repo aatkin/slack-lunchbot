@@ -4,7 +4,8 @@
   "description": "Lunchbot with integration for slack",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register test/**/*.spec.ts -w --watch-extensions ts",
+    "test": "mocha --require ts-node/register test/**/*.spec.ts",
+    "test-watch": "mocha --require ts-node/register test/**/*.spec.ts -w --watch-extensions ts",
     "build": "tsc -w",
     "dev": "nodemon --inspect-brk dist/app.js",
     "start": "node dist/app.js"
